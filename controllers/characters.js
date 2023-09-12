@@ -50,7 +50,7 @@ const getMarvelCharacters = async (req,res) => {
     try{
         const response = await axios.get(`${BASE_URL}/characters?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${md5Hash}`, {
                     params: {
-                      limit: 20
+                      limit: 10
                     }});
                     // const characters = response.data.data.results;
 
@@ -88,7 +88,7 @@ const searchComic = async (req, res) => {
   try{
       const response = await axios.get(`${BASE_URL}/comics?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${md5Hash}`, {
                   params: {
-                    limit: 20,
+                    limit: 10,
                     titleStartsWith: title
                   }});
 
@@ -124,7 +124,7 @@ const searchCharacter = async (req, res) => {
     try{
         const response = await axios.get(`${BASE_URL}/characters?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${md5Hash}`, {
                     params: {
-                      limit: 20,
+                      limit: 10,
                       nameStartsWith: name
                     }});
 

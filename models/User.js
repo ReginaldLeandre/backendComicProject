@@ -2,12 +2,6 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 
-const favoriteSchema = new Schema( {
-    favorite: String,
-    enum: ["Iron Man", "Spider-man", "Captain America", "Hulk", "Black Widow", "X-Men", "Thor", "Black Panther"],
-});
-
-
 
 
 const userSchema = new mongoose.Schema({
@@ -39,7 +33,7 @@ const userSchema = new mongoose.Schema({
         default: null
     }]
     ,
-    favorites: [favoriteSchema],
+    favorite: [String],
 
     isActive: {
         type: Boolean,
